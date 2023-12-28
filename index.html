@@ -1,187 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        
-  <script src="script.js" defer></script>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
-  <title>Digitalseva Helper</title>
- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       
-       
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="style.css">
-        <script>
-          function setCookie(cname,cvalue,exdays) {
-            const d = new Date();
-            d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-          }
-          
-          function getCookie(cname) {
-            let name = cname + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-              let c = ca[i];
-              while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-              }
-              if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-              }
-            }
-            return "";
-          }
-          
-          function checkCookie() {
-            let user = getCookie("username");
-            alert("id " + user);
-            if (user == "5630"|| user=="53240") {
-              
-            } else {
-               alert("Get your ID");
-               location.href="/register.html";
-               
-            }
-          }
-          </script>      
-       
-</head>
-<body onload="checkCookie()">
-
-  <!-- Navbar -->
-  <section class="top-nav">
-    <div>
-      Digitalseva Helper
-    </div>
-    
-    
-  </section>
-
-  
-  <!--list-topics start -->
-  
-     <div class="buttondiv">
-      <div class="list-topics-content" >
-        <ul>
-          <li>
-            <div class="single-list-topics-content">
-              <div class="single-list-topics-icon">
-                <i class="fa fa-book" aria-hidden="true" style="font-size: 20px; color: rgb(31, 67, 55);"></i>
-              </div>
-              <h2><a href="#">Documnets Required</a></h2>
-              
-              <button class="button"><a href="documents.html" style="color: white;">Click here</a></button>
-            </div>
-          </li>
-          <li>
-            <div class="single-list-topics-content">
-              <div class="single-list-topics-icon">
-                <i class="fa fa-inr" aria-hidden="true" style="font-size: 20px; color: rgb(31, 67, 55);"></i>
-              </div>
-              <h2><a href="#" >Service Charge</a></h2>
-              
-              <button class="button"><a href="charges.html" style="color: white;">Click here</a></button>
-            </div>
-          </li>
-          <li>
-            <div class="single-list-topics-content">
-              <div class="single-list-topics-icon">
-                <i class="fa fa-file-text" aria-hidden="true" style="font-size: 20px; color: rgb(31, 67, 55);"></i>
-              </div>
-              <h2><a href="#">Forms</a></h2>
-              <button class="button"><a href="forms.html" style="color: white;">Click here</a></button>
-            </div>
-          </li>
-          <li>
-            <div class="single-list-topics-content">
-              <div class="single-list-topics-icon">
-                <i class="fa fa-pencil" aria-hidden="true" style="font-size: 20px; color: rgb(31, 67, 55);"></i>
-              </div>
-              <h2><a href="#">Editing Tools</a></h2>
-              <button class="button"><a href="editingtool.html" style="color: white;">Click here</a></button>
-            </div>
+function checkCookie() {
             
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-    
- 
-  
-  <!--list-topics end-->
- 
-  <!-- Services -->
-  <div class="search-wrapper">
-    <label for="search">Search Services</label>
-    <input type="search" id="search" placeholder="Type here" data-search>
-  </div>
-  
-  <div class="user-cards" data-user-cards-container></div>
-  
-  <div class="cardiv">
-  <template data-user-template class="short">
-    <div class="card card1">
-      <div class="header" data-header></div>
-      <div class="body deco" data-body></div>   
-    </div>
-  </div>  
-  </template>
+                 setCookie("username", 5630, 365);
+                   alert("Your are Activated");
+          let user = getCookie("username");
+          if (user == "5630"|| user=="53240") {
+            alert("Your ID " + user);
+           
+          } 
+        
+             
+          }
 
-  <!-- Footer -->
-  
-  <footer class="footer-distributed" style="padding-left: 10px ; padding-top:5px ; padding-bottom: 5px;">
+</script>
+</head>
 
-			<div class="footer-left">
+<body onload="checkCookie()"></body>
 
-				<p class="footer-company-name" style="color: rgb(29, 27, 25);">CHOOSCOD © 2023</p>
-			</div>
-
-			<div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p style="color: rgb(32, 29, 25);"><span>Calicut</span> - Ekarool</p>
-				</div>
-
-				<div>
-					<i class="fa fa-phone"></i>
-					<p style="color: rgb(36, 33, 31);">+91 807556 5598</p> 
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:chooscod@gmail.com">mavinthaionline@gmail.com</a></p>
-				</div>
-
-			</div>
-
-			<div class="footer-right">
-
-				
-
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
-				</div>
-
-			</div>
-
-		</footer>
-  
-</body>
 </html>
